@@ -1,5 +1,10 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Personal Website v2
 
+😁🖐️ Hello website developers, I am here to share the portfolio project that I made for your learning materials (website-developer), don't forget to add it to my favorites so that I can share other projects. 🔥
+
+## Website Information
+- NodeJS Version: 18.18.1
+- NPM Version: 9.8.1
 ## Getting Started
 
 First, run the development server:
