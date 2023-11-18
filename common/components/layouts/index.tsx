@@ -23,7 +23,7 @@ export default function Layout({ children }: LayoutProps) {
       </nav>
 
       {/* Konten Utama */}
-      <main className="flex-1 overflow-y-auto md:p-5">
+      <main className="flex-1 overflow-y-auto ">
         {/* Navbar untuk tampilan mobile */}
         <nav className="sm:hidden bg-gray-800 text-gray-100 sticky top-0 z-50">
           <div className="flex justify-between items-center px-4 py-4">
