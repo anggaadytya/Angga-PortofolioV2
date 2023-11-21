@@ -17,7 +17,7 @@ export default function Container({ children, className = '', withMarginTop = tr
   return (
     <div
       data-testid="container"
-      className={` ${(readMode !== 'true' || withMarginTop) && 'mt-[5.6rem]'} lg:mt-0 ${className}`}
+      className={` ${(readMode !== 'true' || withMarginTop) && 'mt-[5.6rem]'} md:mt-0 ${className}`}
       {...others}
     >
       {children}
