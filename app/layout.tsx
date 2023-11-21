@@ -16,10 +16,7 @@ export const metadata: Metadata = {
   description: METADATA.description,
   keywords: METADATA.keyword,
   creator: METADATA.creator,
-  authors: {
-    name: METADATA.creator,
-    url: METADATA.openGraph.url,
-  },
+  authors: METADATA.authors,
   openGraph: {
     images: METADATA.profile,
     url: METADATA.openGraph.url,
