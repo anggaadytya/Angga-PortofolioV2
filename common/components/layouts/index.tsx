@@ -1,12 +1,21 @@
-"use client"
-import React, { Children } from "react";
+"use client";
 
+import { usePathname, useSearchParams } from "next/navigation";
+import React from "react";
+import Sidebar from "./sidebar";
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
 export default function Layout({ children }: LayoutProps) {
+  const pathName = usePathname();
+  const searchParams = useSearchParams();
+  const readMode = searchParams.get("read-mode");
+
+  const hideSidebar =
+    ["/me", "/board"].includes(pathName) || readMode === "true";
+
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
 
   const toggleSidebar = () => {
@@ -14,65 +23,17 @@ export default function Layout({ children }: LayoutProps) {
   };
 
   return (
-
     <div className="flex h-screen">
-      {/* Navbar pada tampilan desktop */}
-      <nav className="hidden sm:block bg-gray-800 text-gray-100 w-64">
-        {/* Isi sidebar di sini */}
-        Sidebar Desktop
-      </nav>
-
-      {/* Konten Utama */}
-      <main className="flex-1 overflow-y-auto ">
-        {/* Navbar untuk tampilan mobile */}
-        <nav className="sm:hidden bg-gray-800 text-gray-100 sticky top-0 z-50">
-          <div className="flex justify-between items-center px-4 py-4">
-            <h1 className="text-xl font-bold">Your App</h1>
-            <button
-              onClick={toggleSidebar}
-              className="text-white focus:outline-none focus:text-white"
-            >
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                {isSidebarOpen ? (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                ) : (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16m-7 6h7"
-                  />
-                )}
-              </svg>
-            </button>
-          </div>
-        </nav>
-
-        {/* Konten */}
+    <div className="flex flex-col md:flex-row md:w-[26rem] lg:w-[23rem] justify-between md:gap-5">
+      {!hideSidebar && (
+        <header>
+          <Sidebar />
+        </header>
+      )}
+    </div>
+      <main className="transition-all scroll-smooth duration-300 w-full md:min-h-screen no-scrollbar">
         {children}
       </main>
-
-      {/* Sidebar pada tampilan mobile */}
-      <aside
-        className={`fixed inset-y-0 left-0 z-50 bg-gray-800 text-gray-100 w-64 sm:hidden ${
-          isSidebarOpen ? 'block' : 'hidden'
-        }`}
-      >
-        {/* Isi sidebar di sini */}
-        Sidebar Mobile
-      </aside>
-    </div>
- 
-
+  </div>
   );
 }
