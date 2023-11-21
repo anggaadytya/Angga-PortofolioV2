@@ -1,16 +1,4 @@
 {
-  "extends": [
-   
-    "next/core-web-vitals",
-   
-  ],
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "node": true
-  },
-  "plugins": ["@typescript-eslint", "simple-import-sort", "unused-imports"],
-  "rules": {
-    "semi": "off"
-  }
+  "extends": ["next/core-web-vitals", "eslint-config-prettier"]
 }
+
