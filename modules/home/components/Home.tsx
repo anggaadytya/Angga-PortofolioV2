@@ -12,7 +12,7 @@ const Home = () => {
     <>
       <Breakline />
       <Title title="Home" icons={<House size={20} />} />
-      <p className="text-sm font-light text-zinc-700">
+      <p className="text-sm font-light text-zinc-700 px-2 md:px-0">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
         inventore ipsam laudantium itaque, dicta laboriosam cupiditate
         doloremque facere! Facilis perferendis repellendus placeat aliquid
