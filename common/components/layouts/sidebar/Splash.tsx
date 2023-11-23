@@ -32,7 +32,7 @@ const SplashScreen = () => {
           stiffness: 260,
           damping: 20,
         }}
-        className=" text-base md:text-xl font-semibold tracking-wider py-2"
+        className=" text-sm md:text-xl font-semibold tracking-wider py-2"
       >
         WELCOME TO WEBSITE PORTOFOLIO
       </motion.h1>

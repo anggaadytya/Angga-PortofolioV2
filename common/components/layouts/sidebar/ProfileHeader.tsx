@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import clsx from 'clsx'
 import React from 'react'
-import { CheckCircle as VerifiedIcon } from '@phosphor-icons/react'
+
 
 import { DEVTO_PROFILE, PROFILE_URL } from '@/common/constant'
 
