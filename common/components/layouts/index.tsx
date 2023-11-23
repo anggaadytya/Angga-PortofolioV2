@@ -23,8 +23,8 @@ export default function Layout({ children }: LayoutProps) {
 
   React.useEffect(() => {
     const times = setTimeout(() => {
-     
-    }, 2000);
+      notLoading();
+    }, 1000);
 
     return () => clearTimeout(times);
   }, []);
@@ -35,8 +35,9 @@ export default function Layout({ children }: LayoutProps) {
         loading ? "justify-center items-center" : ""
       }`}
     >
-      {loading && <SplashScreen />}
-      {!loading && (
+      {loading ? (
+        <SplashScreen />
+      ) : (
         <>
           <div className="flex flex-col md:flex-row md:w-[26rem] lg:w-[23rem] justify-between md:gap-5">
             {!hideSidebar && (
