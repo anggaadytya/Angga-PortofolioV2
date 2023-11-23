@@ -5,6 +5,7 @@ import Layout from "@/common/components/layouts";
 import GoogleAnalytics from "@bradgarropy/next-google-analytics";
 import { METADATA } from "@/common/constant/metadata";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
