@@ -6,18 +6,12 @@ import { House } from "@phosphor-icons/react";
 
 import React from "react";
 import Github from "./Github";
+import Self from "./Self";
 
 const Home = () => {
   return (
     <>
-      <Breakline />
-      <Title title="Home" icons={<House size={20} />} />
-      <p className="text-sm font-light text-zinc-700 px-2 md:px-0">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-        inventore ipsam laudantium itaque, dicta laboriosam cupiditate
-        doloremque facere! Facilis perferendis repellendus placeat aliquid
-        molestiae at accusamus, tenetur dolore sapiente tempora!
-      </p>
+      <Self />
       <Breakline />
       <Github />
       <Breakline />

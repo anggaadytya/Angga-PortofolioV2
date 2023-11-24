@@ -24,7 +24,7 @@ export default function Layout({ children }: LayoutProps) {
   React.useEffect(() => {
     const times = setTimeout(() => {
       notLoading();
-    }, 1000);
+    }, 1500);
 
     return () => clearTimeout(times);
   }, []);

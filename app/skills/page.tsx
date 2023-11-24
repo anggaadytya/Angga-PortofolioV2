@@ -11,7 +11,7 @@ export const metadata: Metadata = {
       } 
 }
 
-export default function page() {
+export default function Skillspage() {
   return (
     <>
       <Container>

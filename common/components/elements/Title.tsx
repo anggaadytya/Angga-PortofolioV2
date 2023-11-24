@@ -7,7 +7,7 @@ interface TitleProps {
 
 const Title = ({icons, title}: TitleProps) => {
   return (
-    <div className='px-2 pb-3 flex items-center gap-2 '>
+    <div className='pb-2 flex items-center gap-2 '>
         {icons}
       <h1 className='text-sm font-semibold'>{title}</h1>
     </div>
