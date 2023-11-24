@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Layout from "@/common/components/layouts";
 import GoogleAnalytics from "@bradgarropy/next-google-analytics";
 import { METADATA } from "@/common/constant/metadata";
 
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -34,7 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <Layout>{children}</Layout>
         <GoogleAnalytics
           measurementId={`${process.env.NEXT_PUBLIC_ANALYTICS_ID}`}
