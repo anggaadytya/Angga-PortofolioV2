@@ -46,7 +46,7 @@ export const MENU_ITEMS: MenuItemProps[] = [
   },
   {
     title: "About",
-    href: "/about",
+    href: "/abouts",
     icon: <ProfileIcon size={iconSize} />,
     isShow: true,
     isExternal: false,
@@ -54,7 +54,7 @@ export const MENU_ITEMS: MenuItemProps[] = [
   },
   {
     title: "Dashboard",
-    href: "/dashboard",
+    href: "/dashboards",
     icon: <DashboardIcon size={iconSize} />,
     isShow: true,
     isExternal: false,

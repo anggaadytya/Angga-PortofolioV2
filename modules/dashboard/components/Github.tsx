@@ -9,7 +9,7 @@ const Github = () => {
   return (
     <div className="w-full">
       <Title icons={<GithubLogo size={20} />} title="Github Contributions" />
-      <div className="px-2 md:px-0 text-xs w-full no-scrollbar ">
+      <div className="px-2 md:px-0 text-xs w-full no-scrollbar flex justify-center ">
         <GitHubCalendar
           username="anggaadytya"
           year={new Date().getFullYear()}

@@ -9,7 +9,6 @@ export const metadata:Metadata = {
   alternates: {
     canonical: process.env.DOMAIN
   } 
-
 }
 
 export default function HomePage() {

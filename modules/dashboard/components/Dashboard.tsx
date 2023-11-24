@@ -1,15 +1,14 @@
 import Breakline from "@/common/components/elements/Breakline";
-
 import React from "react";
-import Self from "./Self";
+import Github from "./Github";
 
-const Home = () => {
+const Dashboard = () => {
   return (
     <>
-      <Self />
+      <Github />
       <Breakline />
     </>
   );
 };
 
-export default Home;
+export default Dashboard;
