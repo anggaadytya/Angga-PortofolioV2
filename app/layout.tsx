@@ -3,7 +3,7 @@ import "./globals.css";
 import Layout from "@/common/components/layouts";
 import GoogleAnalytics from "@bradgarropy/next-google-analytics";
 import { METADATA } from "@/common/constant/metadata";
-
+import ThemeProviderContext from "@/store/theme";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -32,7 +32,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Layout>{children}</Layout>
+        <ThemeProviderContext>
+          <Layout>{children}</Layout>
+        </ThemeProviderContext>
         <GoogleAnalytics
           measurementId={`${process.env.NEXT_PUBLIC_ANALYTICS_ID}`}
         />

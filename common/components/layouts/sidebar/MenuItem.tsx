@@ -18,7 +18,7 @@ export default function MenuItem({ title, href, icon, onClick, className = '', c
   const pathname = usePathname()
   const url = new URL(href, 'https://angga-portofolio-v2.vercel.app/')
 
-  const activeClasses = `flex items-center gap-2 py-2 px-4 text-neutral-700 hover:text-neutral-900  rounded-lg ${
+  const activeClasses = `flex items-center gap-2 py-2 px-4 text-neutral-700 hover:text-neutral-900 rounded-lg  ${
     pathname === url.pathname
       ? 'bg-neutral-100  text-neutral-900 dark:!text-neutral-300'
       : 'hover:lg:bg-neutral-100 hover:lg:rounded-lg lg:hover:scale-105 lg:hover:gap-3 lg:transition-all lg:duration-300'
@@ -51,7 +51,7 @@ export default function MenuItem({ title, href, icon, onClick, className = '', c
         <div className="flex-grow ml-0.5">{title}</div>
         {children && <>{children}</>}
         {isExternalUrl && isHovered && (
-          <ExternalLinkIcon size={22} className="text-gray-500 -rotate-45 md:transition-all md:duration-300" />
+          <ExternalLinkIcon size={22} className="text-black -rotate-45 md:transition-all md:duration-300" />
         )}
       </div>
     )

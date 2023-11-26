@@ -13,9 +13,11 @@
   "dependencies": {
     "@bradgarropy/next-google-analytics": "^1.0.2",
     "@phosphor-icons/react": "^2.0.14",
+    "aos": "^2.3.4",
     "clsx": "^2.0.0",
     "framer-motion": "^10.16.5",
     "next": "14.0.3",
+    "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-github-calendar": "^4.0.6",
@@ -25,6 +27,7 @@
     "zustand": "^4.4.6"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.7",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

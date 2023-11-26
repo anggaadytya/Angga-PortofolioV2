@@ -3,7 +3,9 @@
 import { usePathname, useSearchParams } from "next/navigation";
 import React from "react";
 import Sidebar from "./sidebar";
-import { motion } from "framer-motion";
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -17,36 +19,25 @@ export default function Layout({ children }: LayoutProps) {
   const hideSidebar =
     ["/me", "/board"].includes(pathName) || readMode === "true";
 
+    React.useEffect(() => {
+      AOS.init({
+        duration: 800,
+        delay: 50
+      })
+    }, [])
+
   return (
     <div className={`flex h-screen`}>
-      <motion.div
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{
-          type: "spring",
-          stiffness: 260,
-          damping: 20
-        }}
-        className="flex flex-col md:flex-row md:w-[26rem] lg:w-[23rem] justify-between md:gap-5"
-      >
+      <div className="flex flex-col md:flex-row md:w-[26rem] lg:w-[23rem] justify-between md:gap-5">
         {!hideSidebar && (
           <header>
             <Sidebar />
           </header>
         )}
-      </motion.div>
-      <motion.main
-        initial={{ y: 10, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{
-          type: "spring",
-          stiffness: 100,
-          damping: 10
-        }}
-        className="transition-all scroll-smooth duration-300 w-full md:min-h-screen no-scrollbar"
-      >
+      </div>
+      <main className="transition-all scroll-smooth duration-300 w-full md:min-h-screen no-scrollbar">
         {children}
-      </motion.main>
+      </main>
     </div>
   );
 }

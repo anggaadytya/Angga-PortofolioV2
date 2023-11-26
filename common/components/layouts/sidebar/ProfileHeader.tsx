@@ -1,15 +1,10 @@
-import NextImage from 'next/image'
 import Link from 'next/link'
-
 import clsx from 'clsx'
 import React from 'react'
-
 
 import { DEVTO_PROFILE, PROFILE_URL } from '@/common/constant'
 
 import Image from '../../elements/Image'
-
-
 
 interface ProfileHeaderProps {
   expandMenu: boolean

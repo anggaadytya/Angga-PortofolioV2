@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function Skillspage() {
   return (
     <>
-      <Container>
+      <Container data-aos="fade-up">
         <Skills />
       </Container>
     </>
