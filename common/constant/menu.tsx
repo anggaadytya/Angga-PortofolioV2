@@ -17,13 +17,17 @@ import {
 import { MenuItemProps } from "../types/menu";
 
 const iconSize = 20;
-const color = "black";
 
 export const MENU_ITEMS: MenuItemProps[] = [
   {
     title: "Home",
     href: "/",
-    icon: <HomeIcon size={iconSize} />,
+    icon: (
+      <HomeIcon
+        size={iconSize}
+        
+      />
+    ),
     isShow: true,
     isExternal: false,
     eventName: "Pages: Home",
@@ -31,7 +35,12 @@ export const MENU_ITEMS: MenuItemProps[] = [
   {
     title: "Skills",
     href: "/skills",
-    icon: <ProjectIcon size={iconSize} />,
+    icon: (
+      <ProjectIcon
+        size={iconSize}
+       
+      />
+    ),
     isShow: true,
     isExternal: false,
     eventName: "Pages: Skills",
@@ -39,7 +48,12 @@ export const MENU_ITEMS: MenuItemProps[] = [
   {
     title: "Projects",
     href: "/projects",
-    icon: <BlogIcon size={iconSize} />,
+    icon: (
+      <BlogIcon
+        size={iconSize}
+        
+      />
+    ),
     isShow: true,
     isExternal: false,
     eventName: "Pages: projects",
@@ -47,7 +61,12 @@ export const MENU_ITEMS: MenuItemProps[] = [
   {
     title: "About",
     href: "/abouts",
-    icon: <ProfileIcon size={iconSize} />,
+    icon: (
+      <ProfileIcon
+        size={iconSize}
+       
+      />
+    ),
     isShow: true,
     isExternal: false,
     eventName: "Pages: About",
@@ -55,7 +74,12 @@ export const MENU_ITEMS: MenuItemProps[] = [
   {
     title: "Dashboard",
     href: "/dashboards",
-    icon: <DashboardIcon size={iconSize} />,
+    icon: (
+      <DashboardIcon
+        size={iconSize}
+        
+      />
+    ),
     isShow: true,
     isExternal: false,
     eventName: "Pages: Dashboard",
