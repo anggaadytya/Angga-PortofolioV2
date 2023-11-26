@@ -17,7 +17,7 @@ export const metadata:Metadata = {
 export default function ProjectsPage() {
   return (
     <>
-      <Container data-aos="fade-up">
+      <Container>
         <Project />
       </Container>
     </>

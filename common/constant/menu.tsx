@@ -106,14 +106,6 @@ export const SOCIAL_MEDIA: MenuItemProps[] = [
     backgroundColor: "bg-blue-600",
   },
   {
-    title: "Twitter",
-    href: "",
-    icon: <TwitterIcon size={iconSize} />,
-    isShow: false,
-    isExternal: true,
-    eventName: "Social: Twitter",
-  },
-  {
     title: "Instagram",
     href: "",
     icon: <InstagramIcon size={iconSize} />,

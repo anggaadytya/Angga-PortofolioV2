@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function page() {
   return (
-    <Container data-aos="fade-up">
+    <Container>
       <Dashboard />
     </Container>
   );

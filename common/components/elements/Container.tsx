@@ -1,13 +1,12 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-
-import { ReactNode } from "react";
+import React from "react";
 
 interface ContainerProps {
-  children: ReactNode;
+  children: React.ReactNode;
   className?: string;
-  [propName: string]: ReactNode | string | undefined;
+  [propName: string]: React.ReactNode | string | undefined;
   withMarginTop?: boolean;
 }
 
@@ -19,11 +18,12 @@ export default function Container({
 }: ContainerProps) {
   const searchParams = useSearchParams();
   const readMode = searchParams?.get("read-mode");
+
   return (
     <div
-      data-testid="container"
+      data-aos="fade-up"
       className={` ${
-        (readMode !== "true" || withMarginTop) && "mt-[5.6rem]"
+        (readMode !== "true" || withMarginTop) && "mt-[5.6rem] mx-2 fixed -z-10"
       } md:mt-6 md:mr-2 ${className}`}
       {...others}
     >

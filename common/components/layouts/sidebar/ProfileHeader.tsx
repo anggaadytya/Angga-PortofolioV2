@@ -1,33 +1,33 @@
-import Link from 'next/link'
-import clsx from 'clsx'
-import React from 'react'
+import Link from "next/link";
+import clsx from "clsx";
+import React from "react";
 
-import { DEVTO_PROFILE, PROFILE_URL } from '@/common/constant'
+import { DEVTO_PROFILE, PROFILE_URL } from "@/common/constant";
 
-import Image from '../../elements/Image'
+import Image from "../../elements/Image";
 
 interface ProfileHeaderProps {
-  expandMenu: boolean
-  imageSize: number
+  expandMenu: boolean;
+  imageSize: number;
 }
 
-export default function ProfileHeader({ expandMenu, imageSize }: ProfileHeaderProps) {
+export default function ProfileHeader({
+  expandMenu,
+  imageSize,
+}: ProfileHeaderProps) {
   return (
     <div
       className={clsx(
-        'flex items-center gap-4 md:gap-0.5 flex-grow md:flex-col w-full',
-        
+        "flex items-center gap-4 md:gap-0.5 flex-grow md:flex-col w-full"
       )}
     >
       <div className="relative overflow-hidden hidden w-full pb-2 lg:flex flex-col items-center">
-       
-     
         <div className="">
           <Image
             src={PROFILE_URL}
             alt="profile"
             width={80}
-            height={ 80 }
+            height={80}
             rounded="rounded-full"
             className="md:hover:scale-105"
           />
@@ -43,7 +43,9 @@ export default function ProfileHeader({ expandMenu, imageSize }: ProfileHeaderPr
       />
       <div className="flex gap-2 items-center">
         <Link href="/" passHref>
-          <h2 className="flex-grow text-sm md:text-xl font-sora font-medium">Muhammad Angga Adytya</h2>
+          <h2 className="flex-grow text-sm md:text-xl font-sora font-medium">
+            Muhammad Angga Adytya
+          </h2>
         </Link>
       </div>
       <Link
@@ -54,5 +56,5 @@ export default function ProfileHeader({ expandMenu, imageSize }: ProfileHeaderPr
         @Angga_Adytya
       </Link>
     </div>
-  )
+  );
 }
