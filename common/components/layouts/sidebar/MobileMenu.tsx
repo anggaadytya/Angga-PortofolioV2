@@ -16,6 +16,7 @@ const MobileMenu: FC = () => {
       initial={{ x: -100 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.3 }}
+      exit={{ opacity: 0, x: -100 }}
     >
       <div>
         <Breakline className="mt-2" />

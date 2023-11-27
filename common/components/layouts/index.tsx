@@ -35,7 +35,7 @@ export default function Layout({ children }: LayoutProps) {
           </header>
         )}
       </div>
-      <main className="transition-all scroll-smooth duration-300 w-full md:min-h-screen no-scrollbar">
+      <main className="transition-all scroll-smooth duration-300 w-full md:min-h-screen">
         {children}
       </main>
     </div>

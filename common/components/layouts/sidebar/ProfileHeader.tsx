@@ -43,6 +43,7 @@ export default function ProfileHeader({
       />
       <div className="flex gap-2 items-center">
         <Link href="/" passHref>
+         
           <h2 className="flex-grow text-sm md:text-xl font-sora font-medium">
             Muhammad Angga Adytya
           </h2>

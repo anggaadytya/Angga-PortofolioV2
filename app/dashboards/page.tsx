@@ -3,6 +3,7 @@ import React from "react";
 import { METADATA } from "@/common/constant/metadata";
 import { Metadata } from "next";
 import Container from "@/common/components/elements/Container";
+import PageHeading from "@/common/components/elements/PageHeading";
 
 export const metadata: Metadata = {
   title: `Dashboard | ${METADATA.exTitle}`,
@@ -12,9 +13,13 @@ export const metadata: Metadata = {
   },
 };
 
+
+const PAGE_TITLE = "Dashboard";
+
 export default function page() {
   return (
     <Container>
+      <PageHeading title={PAGE_TITLE}/>
       <Dashboard />
     </Container>
   );

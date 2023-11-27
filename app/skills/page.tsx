@@ -1,4 +1,5 @@
 import Container from "@/common/components/elements/Container";
+import PageHeading from "@/common/components/elements/PageHeading";
 import { METADATA } from "@/common/constant/metadata";
 import Skills from "@/modules/skills";
 import { Metadata } from "next";
@@ -12,10 +13,13 @@ export const metadata: Metadata = {
       } 
 }
 
+const PAGE_TITLE = 'Skills'
+
 export default function Skillspage() {
   return (
     <>
       <Container>
+        <PageHeading title={PAGE_TITLE} />
         <Skills />
       </Container>
     </>
